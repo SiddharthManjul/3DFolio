@@ -55,15 +55,15 @@ const Navigation = () => {
           <div
             className={
               nav
-                ? "flex flex-col justify-center items-left absolute top-0 left-0 ease-in-out duration-800 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500"
-                : "flex flex-col justify-center items-left absolute top-0 left-[-100%] ease-in-out duration-800 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500"
+                ? "flex flex-col justify-center items-left absolute top-0 left-0 ease-in duration-300 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500"
+                : "flex flex-col justify-center items-left absolute top-0 left-[-100%] ease-in duration-300 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500"
             }
           >
             <ul>
               {links.map(({ id, link }) => (
                 <li
                   key={id}
-                  className="px-4 cursor-pointer capitalize py-6 text-4xl"
+                  className="px-4 cursor-pointer capitalize py-6 text-4xl hover:bg-gradient-to-r from-black to-gray-800 backdrop-blur-xl"
                 >
                   <Link onClick={() => setNav(!nav)} href={link}>
                     {link}
