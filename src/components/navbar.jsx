@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import Hero from "./hero";
+
 const Navigation = () => {
   const [nav, setNav] = useState(false);
 
@@ -29,11 +31,11 @@ const Navigation = () => {
   return (
     <>
       <div className="flex bg-slate-400">
-        <ul className="hidden md:flex md:flex-col h-screen justify-center gap-y-8">
+        <ul className="hidden md:flex md:flex-col h-screen justify-center gap-y-8 =">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="nav-links px-4 md:mt-4 cursor-pointer capitalize text-4xl font-medium text-gray-500 hover:scale-105 hover:text-cyan-900 duration-200n link-underline"
+              className="josefinSans font-normal nav-links px-4 md:mt-4 cursor-pointer capitalize text-4xl text-gray-500 hover:scale-105 hover:text-cyan-900 duration-200n link-underline"
             >
               <Link href={link}>{link}</Link>
             </li>
@@ -74,7 +76,7 @@ const Navigation = () => {
           </div>
         )}
         <div className="bg-slate-100 w-full hidden md:block">
-          <Link href="/">Siddharth Manjul</Link>
+          <Hero />
         </div>
       </div>
     </>
